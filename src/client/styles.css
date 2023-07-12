@@ -1,0 +1,67 @@
+section {
+    margin: 2rem 20%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 1rem;
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    padding-top: 2rem;
+}
+
+#footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #bcc8c4;
+    background-color: #3c6255;
+}
+
+
+/* Homepage */
+
+.homepage-section {
+    margin: 5rem 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .homepage-section {
+        margin: 3rem 0;
+    }
+}
+
+
+/* Clients */
+
+.clients {
+    margin: 0 10%;
+}
+
+.client-logo {
+    border: 1rem solid transparent;
+}
+
+
+/* Testimonials */
+
+.testimonial {
+    text-align: center;
+    font-size: larger;
+    background-color: #a6bb8d;
+}
+
+.quotes {
+    margin-bottom: 1rem;
+}
+
+
+/* Contact */
+
+.contact {
+    margin: 2rem 10%;
+}
+
+.contact i {
+    margin: 1rem 0;
+}

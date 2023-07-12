@@ -25,6 +25,11 @@ export async function getPages() {
 			.where("page_id", 3)
 			.first();
 	
+	const homepage = await knex("pages")
+			.select("*")
+			.where("page_id", 4)
+			.first();
+	
 	return {
 		organisationalDesign: {
 			...organisationalDesign,
@@ -38,7 +43,10 @@ export async function getPages() {
 			...culture,
 			testimonials: await getTestimonials(3)
 		},
-		homepage: await getTestimonials(null)
+		homepage: {
+			...homepage,
+			testimonials: await getTestimonials(null)
+		}
 	}
 }
 

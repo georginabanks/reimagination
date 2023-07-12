@@ -1,21 +1,26 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {getClients} from "../api/api.jsx";
 
 export default function ClientLogos() {
 	
 	const [clients, setClients] = useState([]);
 	
+	useEffect(() => {
+		getClients().then(res => setClients(res))
+	})
+	
 	return (
-			<div className={"clients homepage-section"}>
+			<section className={"clients dark"}>
 				<h1>Clients</h1>
 				
 				<div className={"row"}>
 				{
 					clients.map(client => {
 						return (
-								<div className={"col-md-2"}>
-									<img src={client.logo}
+								<div className={"col-md-2"} key={client.id}>
+									<img src={client.img_src}
 										 width={"100%"}
-										 alt={client.name + " Logo"}
+										 alt={client.client_name + " Logo"}
 										 className={"client-logo"}
 									/>
 								</div>
@@ -23,6 +28,6 @@ export default function ClientLogos() {
 					})
 				}
 				</div>
-			</div>
+			</section>
 	)
 }

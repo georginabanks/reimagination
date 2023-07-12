@@ -21,7 +21,7 @@ export default function ContactForm() {
 	}
 	
 	return(
-			<div>
+			<div className={"contact"}>
 				<form onSubmit={handleSubmit}>
 					<div className="mb-3">
 						<label htmlFor="clientName" className="form-label">Name</label>
@@ -41,7 +41,7 @@ export default function ContactForm() {
 								  onChange={handleChange}></textarea>
 					</div>
 					
-					<button className="button btn btn-dark" style={{backgroundColor: "#3c6255"}} type="submit"
+					<button className="button btn btn-dark" style={{backgroundColor: "#385B4F"}} type="submit"
 							onSubmit={handleSubmit}>
 						{button}
 					</button>

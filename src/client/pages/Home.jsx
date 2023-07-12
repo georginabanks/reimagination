@@ -2,16 +2,16 @@ import ClientLogos from "../components/ClientLogos.jsx";
 import Testimonials from "../components/Testimonials.jsx";
 import ContactForm from "../components/ContactForm.jsx";
 
-export default function Home({ testimonials }) {
+export default function Home({ page }) {
 	return (
 			<div>
-				<section>
-					<ClientLogos />
-				</section>
+				<img src={page.featured_image} alt={"featured-img"} className={"featured-img"} />
 				
-				<Testimonials testimonials={testimonials} />
+				<ClientLogos />
 				
-				<section>
+				{page.testimonials.length > 0 && <Testimonials testimonials={page.testimonials} />}
+				
+				<section className={"light"}>
 					<h1>Contact</h1>
 					<ContactForm />
 				</section>

@@ -1,6 +1,6 @@
 export default function Navigation() {
 	return (
-			<nav className="navbar navbar-expand-lg" style={{backgroundColor: "#3c6255"}} data-bs-theme="dark">
+			<nav className={"navbar navbar-expand-lg fixed-top"} data-bs-theme="dark" style={{backgroundColor: "transparent"}}>
 				<div className="container-fluid">
 					<a className="navbar-brand" href="/">Reimagination</a>
 					
@@ -17,13 +17,13 @@ export default function Navigation() {
 									<a className="nav-link active" aria-current="page" href="/">Home</a>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="/design">Design</a>
+									<a className="nav-link" href="/organisational-design">Design</a>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="/discovery">Discovery</a>
+									<a className="nav-link" href="/individual-team-discovery">Discovery</a>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="/culture-change">Culture Change</a>
+									<a className="nav-link" href="/culture">Culture</a>
 								</li>
 								<li className="nav-item">
 									<a className="nav-link" href="/contact">Contact</a>

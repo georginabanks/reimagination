@@ -5,20 +5,21 @@ import Navigation from "./components/Navigation.jsx";
 import Footer from "./components/Footer.jsx";
 import Contact from "./pages/Contact.jsx";
 import Page from "./pages/Page.jsx";
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import {getPages} from "./api/api.jsx";
 
 export default function App() {
-	
+
 	const [cookies, setCookie, removeCookie] = useCookies(["admin"]);
 	const [pages, setPages] = useState({});
-	
+
 	useEffect(() => {
 		getPages().then(res => setPages(res));
 	}, []);
 	
+
 	// Standard Layout
-	
+
 	function Layout() {
 		return (
 				<div>
@@ -28,12 +29,12 @@ export default function App() {
 				</div>
 		)
 	}
-	
+
 	if (pages.homepage) {
 		return (
 				<Routes>
 					<Route path={"/"} element={<Layout/>}>
-						<Route path={""} element={<Home testimonials={pages.homepage}/>}/>
+						<Route path={""} element={<Home page={pages.homepage}/>}/>
 						<Route path={"organisational-design"} element={<Page page={pages.organisationalDesign}/>}/>
 						<Route path={"individual-team-discovery"}
 							   element={<Page page={pages.individualTeamDiscovery}/>}/>

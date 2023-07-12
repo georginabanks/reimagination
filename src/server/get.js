@@ -12,30 +12,33 @@ export async function getPages() {
 	
 	const organisationalDesign = await knex("pages")
 			.select("*")
-			.where("page_id", 1);
+			.where("page_id", 1)
+			.first();
 	
 	const individualTeamDiscovery = await knex("pages")
 			.select("*")
-			.where("page_id", 2);
+			.where("page_id", 2)
+			.first();
 	
 	const culture = await knex("pages")
 			.select("*")
-			.where("page_id", 3);
+			.where("page_id", 3)
+			.first();
 	
 	return {
 		organisationalDesign: {
 			...organisationalDesign,
-			testimonials: getTestimonials(1)
+			testimonials: await getTestimonials(1)
 		},
 		individualTeamDiscovery: {
 			...individualTeamDiscovery,
-			testimonials: getTestimonials(2)
+			testimonials: await getTestimonials(2)
 		},
 		culture: {
 			...culture,
-			testimonials: getTestimonials(3)
+			testimonials: await getTestimonials(3)
 		},
-		homepage: getTestimonials(null)
+		homepage: await getTestimonials(null)
 	}
 }
 

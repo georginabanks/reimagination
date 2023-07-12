@@ -1,7 +1,7 @@
-export default function Page({props}) {
+export default function Page({ page }) {
 	return (
 			<div>
-				<h1></h1>
+				<h1>{page.page_name}</h1>
 			</div>
 	)
 }

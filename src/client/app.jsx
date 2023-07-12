@@ -34,7 +34,7 @@ export default function App() {
 		return (
 				<Routes>
 					<Route path={"/"} element={<Layout/>}>
-						<Route path={""} element={<Home page={pages.homepage}/>}/>
+						<Route path={""} element={<Home page={pages.homepage} pages={pages}/>} />
 						<Route path={"organisational-design"} element={<Page page={pages.organisationalDesign}/>}/>
 						<Route path={"individual-team-discovery"}
 							   element={<Page page={pages.individualTeamDiscovery}/>}/>

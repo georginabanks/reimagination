@@ -17,7 +17,7 @@ export default function ClientLogos() {
 				{
 					clients.map(client => {
 						return (
-								<div className={"col-md-2"} key={client.id}>
+								<div className={"col-4 col-md-2"} key={client.id}>
 									<img src={client.img_src}
 										 width={"100%"}
 										 alt={client.client_name + " Logo"}

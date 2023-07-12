@@ -23,28 +23,43 @@ export default function ContactForm() {
 	return(
 			<div className={"contact"}>
 				<form onSubmit={handleSubmit}>
-					<div className="mb-3">
-						<label htmlFor="clientName" className="form-label">Name</label>
-						<input type="text" className="form-control" name="clientName"
-							   placeholder="Jane Doe" onChange={handleChange} />
+					<div className="mb-3 row">
+						<div className={"col-md-3"}>
+							<label htmlFor="clientName" className="form-label">Name</label>
+						</div>
+						<div className={"col-md-9"}>
+							<input type="text" className="form-control" name="clientName" onChange={handleChange} />
+						</div>
 					</div>
 					
-					<div className="mb-3">
-						<label htmlFor="clientEmail" className="form-label">Email</label>
-						<input type="email" className="form-control" name="clientEmail"
-							   placeholder="name@example.com" onChange={handleChange} />
+					<div className="mb-3 row">
+						<div className={"col-md-3"}>
+							<label htmlFor="clientEmail" className="form-label">Email</label>
+						</div>
+						<div className={"col-md-9"}>
+							<input type="email" className="form-control" name="clientEmail" onChange={handleChange} />
+						</div>
 					</div>
 					
-					<div className="mb-3">
-						<label htmlFor="clientMessage" className="form-label">Message</label>
-						<textarea className="form-control" name="clientMessage" rows="5"
-								  onChange={handleChange}></textarea>
+					<div className="mb-3 row">
+						<div className={"col-md-3"}>
+							<label htmlFor="clientMessage" className="form-label">Message</label>
+						</div>
+						<div className={"col-md-9"}>
+							<textarea className="form-control" name="clientMessage" rows="5" onChange={handleChange}
+									  style={{ backgroundColor: "#D7EDDA", border: "2px solid #385B4F",
+										  borderRadius: "1.5rem" }}></textarea>
+						</div>
 					</div>
 					
-					<button className="button btn btn-dark" style={{backgroundColor: "#385B4F"}} type="submit"
-							onSubmit={handleSubmit}>
-						{button}
-					</button>
+					<div className={"row justify-content-md-end"}>
+						<div className={"col-2"}>
+							<button className="button btn btn-dark" type="submit"
+									onSubmit={handleSubmit}>
+								{button}
+							</button>
+						</div>
+					</div>
 				</form>
 			</div>
 	);

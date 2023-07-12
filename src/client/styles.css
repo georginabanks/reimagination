@@ -7,6 +7,7 @@ section {
 
 html {
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,6 +17,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h2, h3, h4, h5, h6 {
     padding-top: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
 }
 
 
@@ -39,15 +48,51 @@ h2, h3, h4, h5, h6 {
 }
 
 
+/* Navigation */
+
+.navbar {
+    padding: 0.2rem 1rem;
+    background-color: transparent !important;
+}
+
+.navbar.scrolled {
+    background-color: #385B4F !important;
+    transition: background-color 300ms linear;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+
 /* Featured Image */
 
+.img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: #385B4F;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .featured-img {
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
     object-fit: cover;
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    opacity: 35%;
+}
+
+.homepage .featured-img {
+    height: 100vh;
 }
 
 
@@ -73,15 +118,25 @@ h2, h3, h4, h5, h6 {
 
 /* Testimonials */
 
-.testimonial {
+.testimonials {
     text-align: center;
-    font-size: larger;
     color: #a6bb8d;
     background-color: #385B4F;
+    padding: 2rem 0;
+}
+
+.testimonial-text {
+    padding: 2rem 25% 0;
 }
 
 .quotes {
     padding-bottom: 1rem;
+}
+
+.bio-text {
+    position: relative;
+    bottom: 1rem;
+    font-size: smaller;
 }
 
 
@@ -98,4 +153,33 @@ h2, h3, h4, h5, h6 {
     text-align: center;
     padding: 1rem 0;
     font-size: 10px;
+    color: #a6bb8d;
+    border-top: darkslategray solid 1px;
+}
+
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 700px) {
+    .lg-screen { display: none; }
+
+    section {
+        padding: 2rem 10%;
+    }
+
+    h1 {
+    font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-text {
+        padding: 2rem 10% 0;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .sm-screen { display: none; }
 }

@@ -11,7 +11,7 @@ export default function ClientLogos() {
 	
 	return (
 			<section className={"clients dark"}>
-				<h1>Clients</h1>
+				<h2>Clients</h2>
 				
 				<div className={"row"}>
 				{

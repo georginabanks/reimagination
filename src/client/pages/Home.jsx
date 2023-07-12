@@ -4,15 +4,17 @@ import ContactForm from "../components/ContactForm.jsx";
 
 export default function Home({ page }) {
 	return (
-			<div>
-				<img src={page.featured_image} alt={"featured-img"} className={"featured-img"} />
+			<div className={"homepage"}>
+				<div className={"img-container"}>
+					<img src={page.featured_image} alt={"featured-img"} className={"featured-img"} />
+				</div>
 				
 				<ClientLogos />
 				
 				{page.testimonials.length > 0 && <Testimonials testimonials={page.testimonials} />}
 				
 				<section className={"light"}>
-					<h1>Contact</h1>
+					<h2>Contact</h2>
 					<ContactForm />
 				</section>
 			</div>

@@ -1,6 +1,7 @@
 import express from "express";
 import ViteExpress from "vite-express";
 import emailjs from "@emailjs/browser";
+import {getClients, getPages} from "./get.js";
 
 // App
 
@@ -14,7 +15,21 @@ app.post("/api/contact", async function (req, res) {
 				req.body, 'LpZBvIHaKa3icIkGq')
 			.then(r => res.send("success"))
 			.catch(err => res.send(err));
-})
+});
+
+
+// Get Pages & Testimonials
+
+app.get("/api/pages", async function (req, res) {
+	res.send(await getPages());
+});
+
+
+// Get Clients
+
+app.get("/api/clients", async function (req, res) {
+	res.send(await getClients());
+});
 
 
 // Server

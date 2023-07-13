@@ -7,7 +7,7 @@ export default function ContactForm() {
 	const [button, setButton] = useState("Submit")
 	
 	let rows = "5";
-	if (window.screen.height < 600) { rows = "1" }
+	if (window.screen.height < 600) { rows = "4" }
 	
 	const handleChange = (event) => {
 		const data = {

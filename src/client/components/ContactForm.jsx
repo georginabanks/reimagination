@@ -6,6 +6,9 @@ export default function ContactForm() {
 	const [content, setContent] = useState({});
 	const [button, setButton] = useState("Submit")
 	
+	let rows = "5";
+	if (window.screen.height < 600) { rows = "1" }
+	
 	const handleChange = (event) => {
 		const data = {
 			...content,
@@ -21,7 +24,7 @@ export default function ContactForm() {
 	}
 	
 	return(
-			<div className={"contact"}>
+			<div className={"row"}>
 				<form onSubmit={handleSubmit}>
 					<div className="mb-3 row">
 						<div className={"col-md-3"}>
@@ -46,7 +49,7 @@ export default function ContactForm() {
 							<label htmlFor="clientMessage" className="form-label">Message</label>
 						</div>
 						<div className={"col-md-9"}>
-							<textarea className="form-control" name="clientMessage" rows="5" onChange={handleChange}
+							<textarea className="form-control" name="clientMessage" rows={rows} onChange={handleChange}
 									  style={{ backgroundColor: "#D7EDDA", border: "2px solid #385B4F",
 										  borderRadius: "1.5rem" }}></textarea>
 						</div>

@@ -1,16 +1,13 @@
-import ContactForm from "../components/ContactForm.jsx";
+import Contact from "../components/Contact.jsx";
+import Navigation from "../components/Navigation.jsx";
+import Footer from "../components/Footer.jsx";
 
-export default function Contact() {
+export default function ContactPage() {
 	return (
-			<section className={"contact"}>
-				<h1>Contact</h1>
-				
-				<a href={"https://www.linkedin.com/in/natalie-banks-mcipd-601741a/"}>
-					<i className="fa-brands fa-linkedin-in"></i>
-				</a>
-				
-				<ContactForm />
-				<br />
-			</section>
+			<div id={"contact"}>
+				<Navigation />
+				<Contact header={<h1>Contact</h1>} cssStyle={{minHeight: "calc(100vh - 3rem)"}}/>
+				<Footer />
+			</div>
 	)
 }

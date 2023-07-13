@@ -1,5 +1,10 @@
+html, body {
+    margin: 0;
+    width: 100vw;
+}
+
 section {
-    padding: 5rem 25%;
+    padding: 4rem 25%;
 }
 
 
@@ -50,12 +55,16 @@ h2 {
 
 .navbar {
     padding: 0.5rem 1rem;
-    background-color: transparent !important;
+    background-color: transparent;
 }
 
 .navbar.scrolled {
     background-color: #385B4F !important;
-    transition: background-color 300ms linear;
+    transition: background-color 200ms linear;
+}
+
+#contact .navbar {
+    background-color: #385B4F !important;
 }
 
 .navbar-brand {
@@ -90,7 +99,7 @@ h2 {
 }
 
 .homepage .featured-img {
-    height: 100vh;
+    height: calc(100vh + 0.5rem);
 }
 
 
@@ -147,6 +156,10 @@ h2 {
 
 /* Contact */
 
+.contact-header {
+    padding: 2rem 0 1rem;
+}
+
 .social-links {
     padding: 1rem 0;
     color: #385B4F;
@@ -175,16 +188,21 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     font-weight: lighter;
     color: #D7EDDA;
     border-top: darkslategray solid 1px;
+    height: 3.2rem;
 }
 
 
 /* Mobile Responsive */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     .lg-screen { display: none; }
 
     section {
         padding: 2rem 10%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        padding: 0 1rem;
     }
 
     h1 {
@@ -199,11 +217,24 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
         padding: 2rem 10% 0;
     }
 
+    .contact-header {
+        padding-bottom: 0;
+    }
+
     .social-links {
         padding: 0.7rem 0;
     }
+
+    label {
+        padding: 0;
+        margin: 0;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        margin-bottom: 0;
+    }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
     .sm-screen { display: none; }
 }

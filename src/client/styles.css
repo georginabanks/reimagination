@@ -69,6 +69,8 @@ h2 {
 
 .navbar-brand {
     font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    font-size: xx-large;
 }
 
 
@@ -206,7 +208,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     }
 
     h1 {
-    font-size: 2.2rem;
+        font-size: 2.2rem;
     }
 
     h2 {

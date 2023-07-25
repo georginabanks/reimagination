@@ -12,7 +12,7 @@ export default function Page({ page }) {
 				</div>
 				
 				<section>
-					{ content.map(para => <p>{para}</p>) }
+					{ content.map(para => <p>{para.replace("\\", "")}</p>) }
 				</section>
 				
 				{ page.testimonials.length > 0 && <Testimonials testimonials={page.testimonials}/> }

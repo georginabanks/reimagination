@@ -15,7 +15,17 @@ export default function Contact({ header, cssStyle }) {
 					</div>
 				</div>
 				
-				<ContactForm />
+				<div className={"row justify-content-between"}>
+					<div className={"col-md-7"}>
+						<ContactForm />
+					</div>
+					
+					<div className={"col-md-4 profile align-self-baseline"}>
+						<img src={"https://i.postimg.cc/j2KvZsw1/1e4b4604-93ce-4f06-a752-21d8c0cd6b8b.jpg"}
+							 alt={"photo of Natalie"} className={"profile-photo"} />
+						<h5>Natalie Banks</h5>
+					</div>
+				</div>
 			</section>
 	)
 }

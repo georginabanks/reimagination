@@ -180,6 +180,16 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     border: 2px solid #385B4F;
 }
 
+.profile {
+    border: #385B4F solid 1px;
+}
+
+.profile-photo {
+    max-width: 100%;
+    padding: 1rem 5% 0;
+    border-radius: 50%;
+}
+
 
 /* Footer */
 

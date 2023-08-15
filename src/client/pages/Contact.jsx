@@ -6,7 +6,7 @@ export default function ContactPage() {
 	return (
 			<div id={"contact"}>
 				<Navigation />
-				<Contact header={<h1>Contact</h1>} cssStyle={{minHeight: "calc(100vh - 3rem)"}}/>
+				<Contact header={<h1>Contact</h1>} cssStyle={{minHeight: "calc(100vh - 3.2rem)"}}/>
 				<Footer />
 			</div>
 	)

@@ -55,13 +55,11 @@ export default function ContactForm() {
 						</div>
 					</div>
 					
-					<div className={"row justify-content-md-end"}>
-						<div className={"col-2"}>
-							<button className="button btn btn-dark" type="submit"
-									onSubmit={handleSubmit}>
-								{button}
-							</button>
-						</div>
+					<div className={"position-relative"}>
+						<button className="button btn btn-dark position-absolute end-0"
+								type="submit" onSubmit={handleSubmit}>
+							{button}
+						</button>
 					</div>
 				</form>
 			</div>

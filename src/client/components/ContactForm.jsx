@@ -1,7 +1,9 @@
-import { useState } from "react";
-import SubmitPost from "../api/Submit.jsx";
+import {useRef, useState} from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
+	
+	const form = useRef();
 	
 	const [content, setContent] = useState({});
 	const [button, setButton] = useState("Submit")
@@ -20,12 +22,20 @@ export default function ContactForm() {
 	
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		SubmitPost(content, "Sending...", "Done!", setButton);
+		setButton("Sending...")
+		
+		emailjs.sendForm('service_3sqq54p', 'template_s5vnz5d', form.current, 'LpZBvIHaKa3icIkGq')
+		.then(function(response) {
+		   console.log('SUCCESS!', response.status, response.text);
+		   setButton("Sent!");
+		}, function(error) {
+		   console.log('FAILED...', error);
+		})
 	}
 	
 	return(
 			<div className={"row"}>
-				<form onSubmit={handleSubmit}>
+				<form ref={form} onSubmit={handleSubmit}>
 					<div className="mb-3 row">
 						<div className={"col-md-3"}>
 							<label htmlFor="clientName" className="form-label">Name</label>
@@ -40,7 +50,7 @@ export default function ContactForm() {
 							<label htmlFor="clientEmail" className="form-label">Email</label>
 						</div>
 						<div className={"col-md-9"}>
-							<input type="email" className="form-control" name="clientEmail" onChange={handleChange} />
+							<input type="text" className="form-control" name="clientEmail" onChange={handleChange} />
 						</div>
 					</div>
 					
